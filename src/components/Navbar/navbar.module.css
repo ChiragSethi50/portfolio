@@ -1,0 +1,26 @@
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  padding: 0px 50px;
+  height: 100px;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  filter: none;
+  pointer-events: auto;
+  user-select: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .navbar {
+    height: 70px;
+    transform: translateY(0px);
+    /* background-color: rgba(10, 25, 47, 0.85); */
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  }
+}
