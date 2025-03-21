@@ -1,44 +1,34 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/assets";
 import Link from "next/link";
+import LandingSection from "@/components/Sections/Landing";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Stack
-        sx={{
-          position: "fixed",
-          bottom: 0,
-          left: 100,
-          padding: "10px",
-          borderRadius: "8px",
-          zIndex: 9999,
-        }}
-        gap={2}
-      >
+
+      <LandingSection />
+
+      <Stack className={styles.socialMediaLinks}>
         <Link href="http://www.linkedin.com/in/chirag-sethi50" target="_blank" color="#a8b2d1">
-          <Image alt="" src={LinkedinIcon} width={24} height={24} color="#a8b2d1" />
+          <LinkedinIcon className={styles.socialMediaIcons} />
         </Link>
 
         <Link href="https://github.com/ChiragSethi-1153" target="_blank" color="#a8b2d1">
-          <Image alt="" src={GithubIcon} width={24} height={24} color="#a8b2d1" />
+          <GithubIcon className={styles.socialMediaIcons} />
         </Link>
 
         <Link href="https://www.instagram.com" target="_blank" color="#a8b2d1">
-          <Image alt="" src={InstagramIcon} width={24} height={24} color="#a8b2d1" />
+          <InstagramIcon className={styles.socialMediaIcons} />
         </Link>
 
-        <hr
-          style={{
-            display: "block",
-            width: "1px",
-            height: "90px",
-            margin: "0px auto",
-            background: "#a8b2d1 !important",
-          }}
-        />
+        <hr className={styles.footerVerticalLine} />
+      </Stack>
+
+      <Stack className={styles.emailLink}>
+        <Typography className={styles.emailLinkText}>chiragsethi50@gmail.com</Typography>
+        <hr className={styles.footerVerticalLine} />
       </Stack>
     </div>
   );

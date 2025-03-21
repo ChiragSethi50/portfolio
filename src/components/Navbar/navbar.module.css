@@ -24,3 +24,14 @@
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
   }
 }
+
+.navbarLink {
+  margin: 0px 5px;
+  position: relative;
+  font-size: var(--fz-xs);
+  color: var(--lightest-slate);
+    font-family: var(--font-mono);
+}
+.navbarLink:focus {
+  color: var(--green);
+}
