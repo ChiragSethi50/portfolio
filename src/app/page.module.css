@@ -9,7 +9,7 @@
 .socialMediaLinks {
   position: fixed;
   bottom: 0px;
-  left: 8dvw;
+  left: 6dvw;
   padding: 10px;
   padding-bottom: 0px;
   border-radius: 8px;
@@ -37,7 +37,7 @@
 .emailLink {
   position: fixed;
   bottom: 0px;
-  right: 8dvw;
+  right: 6dvw;
   padding: 10px;
   padding-bottom: 0px;
   border-radius: 8px;
@@ -60,4 +60,16 @@
   cursor: pointer;
   color: var(--green);
   transform: translateY(-3px);
+}
+
+@media only screen and (max-width: 768px) {
+    .socialMediaLinks {
+      display: none;
+    }
+    .emailLink {
+      display: none;
+    }
+    .page {
+      padding: 0 30px;
+    }
 }

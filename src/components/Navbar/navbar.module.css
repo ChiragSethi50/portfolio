@@ -35,3 +35,7 @@
 .navbarLink:focus {
   color: var(--green);
 }
+
+.navbarLink:hover {
+  color: var(--green);
+}
