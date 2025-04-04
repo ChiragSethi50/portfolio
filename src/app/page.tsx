@@ -1,38 +1,58 @@
+"use client";
 import styles from "./page.module.css";
-import { Stack, Typography } from "@mui/material";
+import { Fade, Stack, Typography } from "@mui/material";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/assets";
 import Link from "next/link";
 import LandingSection from "@/components/Sections/Landing";
 import { LINKS } from "@/constants/links";
 import About from "@/components/Sections/About";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import AnimatedLoader from "@/components/AnimatedLoader";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Stack className={styles.page}>
-      <LandingSection />
-      <About />
+    <>
+      {isLoading ? (
+        <AnimatedLoader />
+      ) : (
+        <Fade in={!isLoading} timeout={1000}>
+          <Stack className={styles.page}>
+            <LandingSection />
+            <About />
 
-      <Stack className={styles.socialMediaLinks}>
-        <Link href={LINKS.linkedIn} target="_blank" color="#a8b2d1">
-          <LinkedinIcon className={styles.socialMediaIcons} />
-        </Link>
+            <Stack className={styles.socialMediaLinks}>
+              <Link href={LINKS.linkedIn} target="_blank" color="#a8b2d1">
+                <LinkedinIcon className={styles.socialMediaIcons} />
+              </Link>
 
-        <Link href={LINKS.github} target="_blank" color="#a8b2d1">
-          <GithubIcon className={styles.socialMediaIcons} />
-        </Link>
+              <Link href={LINKS.github} target="_blank" color="#a8b2d1">
+                <GithubIcon className={styles.socialMediaIcons} />
+              </Link>
 
-        <Link href={LINKS.instagram} target="_blank" color="#a8b2d1">
-          <InstagramIcon className={styles.socialMediaIcons} />
-        </Link>
+              <Link href={LINKS.instagram} target="_blank" color="#a8b2d1">
+                <InstagramIcon className={styles.socialMediaIcons} />
+              </Link>
 
-        <hr className={styles.footerVerticalLine} />
-      </Stack>
+              <hr className={styles.footerVerticalLine} />
+            </Stack>
 
-      <Stack className={styles.emailLink}>
-        <Typography className={styles.emailLinkText}>{LINKS.email}</Typography>
-        <hr className={styles.footerVerticalLine} />
-      </Stack>
-    </Stack>
+            <Stack className={styles.emailLink}>
+              <Typography className={styles.emailLinkText}>{LINKS.email}</Typography>
+              <hr className={styles.footerVerticalLine} />
+            </Stack>
+          </Stack>
+        </Fade>
+      )}
+    </>
   );
 }

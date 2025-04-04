@@ -8,7 +8,7 @@ const TorchEffect = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      setMousePosition({ x: e.clientX + window.scrollX, y: e.clientY + window.scrollY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);

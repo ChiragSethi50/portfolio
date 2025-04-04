@@ -1,6 +1,5 @@
 .page {
   padding: 0 150px;
-  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +29,8 @@
 }
 .socialMediaIcons:hover {
   position: relative;
-  top: -2;
+  top: -2px;
+  transition: var(--transition);
   stroke: var(--green);
 }
 

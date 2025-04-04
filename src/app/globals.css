@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url("https://fonts.googleapis.com/css2?family=Inter");
 
 @font-face {
   font-family: "CalibreRegular";
@@ -62,11 +62,13 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--slate);
+  font-family: var(--font-sans) !important;
+  font-size: var(--fz-xl);
+  line-height: 1.3;
 }
 
 * {

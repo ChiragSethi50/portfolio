@@ -4,8 +4,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 const myTheme = {
   white: "#e6f1ff",
   black: "#000000",
-  alternate: "#EEEEEE",
-  backgroundBg: "#F5F5F5",
+  alternate: "#ededed",
+  backgroundBg: "#070f2b",
   scrollbarBg: "#F1F1F1",
   scrollbarThumbBg: "#A8A8A8",
   logoBackground: "#F8F8F8",
@@ -26,7 +26,7 @@ const myTheme = {
 };
 
 const breakpoints = createTheme().breakpoints;
-export const colors = {
+const colors = {
   neutral: {
     50: "#FAFAFA",
     100: "#F5F5F5",
@@ -256,6 +256,7 @@ const theme = createTheme({
     fontWeightBold: fontWeight.bold,
     fontWeightMedium: fontWeight.semiBold,
     fontWeightLight: fontWeight.regular,
+    fontFamily: "var(--font-sans)",
     h1: {
       fontSize: "32px",
       lineHeight: 1.25,
