@@ -5,11 +5,11 @@ import Link from "next/link";
 import LandingSection from "@/components/Sections/Landing";
 import { LINKS } from "@/constants/links";
 import About from "@/components/Sections/About";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <Stack className={styles.page}>
-
       <LandingSection />
       <About />
 
