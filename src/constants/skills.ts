@@ -30,6 +30,9 @@ export const Skills = [
     skill: "Nest.js",
   },
   {
-    skill: "Redux",
+    skill: "Redux Toolkit",
+  },
+  {
+    skill: "Tanstack Query",
   },
 ];

@@ -1,5 +1,4 @@
 .aboutSection {
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -9,9 +8,15 @@
 }
 
 .aboutSectionContent {
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
-  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+
+.textContainer {
+  justify-content: center;
 }
 
 .title {
@@ -50,6 +55,7 @@
 .skill {
   position: relative;
   margin-bottom: 10px;
+  padding: unset;
   padding-left: 20px;
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
@@ -65,7 +71,62 @@
 }
 
 .aboutImage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  max-width: 300px;
+}
+.aboutImageWrapper {
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: var(--transition);
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background-color: var(--green);
+  padding: 10px;
+
+  &::before {
+    top: 0px;
+    left: 0px;
+    background-color: var(--navy);
+    mix-blend-mode: screen;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+
+  &::after {
+    border: 2px solid var(--green);
+    top: 14px;
+    left: 14px;
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+}
+
+.aboutImageWrapper:hover {
+  outline: 0px;
+  transform: translate(-4px, -4px);
+  box-shadow: 0 20px 30px -15px var(--navy-shadow);
+  background-color: transparent;
+}
+
+.aboutImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: opacity 0.25s linear;
+  will-change: opacity;
+  opacity: 1;
+  vertical-align: middle;
 }
