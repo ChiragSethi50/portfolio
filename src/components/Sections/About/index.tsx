@@ -6,7 +6,7 @@ import { Skills } from "../../../constants/skills";
 
 const About = () => {
   return (
-    <Stack className={styles.aboutSection}>
+    <Stack id="about" className={styles.aboutSection}>
       <Typography className={styles.title}>About Me</Typography>
       <Box className={styles.aboutSectionContent}>
         <Stack className={styles.textContainer}>
