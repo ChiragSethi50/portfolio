@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import styles from "./torchEffect.module.css";
 
-const TorchEffect = () => {
+const TorchEffect = ({ children }: { children: React.ReactNode }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -24,7 +24,9 @@ const TorchEffect = () => {
       sx={{
         backgroundImage: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 60%)`,
       }}
-    />
+    >
+      {children}
+    </Box>
   );
 };
 

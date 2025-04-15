@@ -18,9 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProviderWrapper>
-          <TorchEffect />
-          <Navbar />
-          {children}
+          <TorchEffect>
+            <Navbar />
+            {children}
+          </TorchEffect>
         </ThemeProviderWrapper>
       </body>
     </html>
