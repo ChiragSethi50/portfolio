@@ -29,8 +29,8 @@ const About = () => {
         </Stack>
         <Box className={styles.aboutImage}>
           <Box className={styles.aboutImageWrapper}>
-              <GithubIcon className={styles.aboutImg} />
-          {/* <Image src={""} alt="" /> */} 
+            <GithubIcon className={styles.aboutImg} />
+            {/* <Image src={""} alt="" /> */}
           </Box>
         </Box>
       </Box>

@@ -31,7 +31,7 @@
   position: relative;
   font-size: var(--fz-xs);
   color: var(--lightest-slate);
-    font-family: var(--font-mono);
+  font-family: var(--font-mono);
 }
 .navbarLink:focus {
   color: var(--green);

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Box, Stack, Typography } from "@mui/material";
 import styles from "./navbar.module.css";
 import Link from "next/link";

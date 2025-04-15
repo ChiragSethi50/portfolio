@@ -59,7 +59,7 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--dark-slate) var(--navy);
-  scroll-margin-top: 70px; 
+  scroll-margin-top: 70px;
 }
 
 body {
@@ -107,6 +107,8 @@ a {
   box-shadow: var(--btn-shadow);
   transform: translate(-5px, -5px);
 }
-#about, #experience, #contact {
+#about,
+#experience,
+#contact {
   scroll-margin-top: 100px;
 }

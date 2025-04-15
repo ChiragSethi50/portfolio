@@ -46,14 +46,14 @@
 }
 
 .emailLinkText {
-    margin: 4px auto;
-    padding: 10px;
-    font-family: var(--font-mono);
-    font-size: var(--fz-xxs);
-    line-height: var(--fz-lg);
-    letter-spacing: 0.1em;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
+  margin: 4px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: var(--fz-lg);
+  letter-spacing: 0.1em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
 }
 
 .emailLinkText:hover {
@@ -63,13 +63,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .socialMediaLinks {
-      display: none;
-    }
-    .emailLink {
-      display: none;
-    }
-    .page {
-      padding: 0 30px;
-    }
+  .socialMediaLinks {
+    display: none;
+  }
+  .emailLink {
+    display: none;
+  }
+  .page {
+    padding: 0 30px;
+  }
 }
