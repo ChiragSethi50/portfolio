@@ -13,7 +13,7 @@ const LandingSection = () => {
         Full Stack Developer with a proven track record in designing, implementing, and maintaining
         scalable web applications. Committed to delivering high-quality code. utilizing a diverse
         set of programming languages, frameworks, and tools to create efficient and user-friendly
-        solutions. Currently working at <Link href={"https://zenmonk.tech/"}>Zenmonk</Link>.
+        solutions. Currently working at <Link href={LINKS.zenmonk}>Zenmonk</Link>.
       </Typography>
       <ButtonBase
         style={{

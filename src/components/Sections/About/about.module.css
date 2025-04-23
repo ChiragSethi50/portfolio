@@ -1,7 +1,7 @@
 .aboutSection {
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 900px;
   margin: 0px auto;
   padding: 100px 0px;
@@ -82,7 +82,7 @@
   width: 100%;
   border-radius: var(--border-radius);
   background-color: var(--green);
-  padding: 10px;
+  padding: 2px;
 
   &::before {
     top: 0px;
@@ -96,6 +96,11 @@
     height: 100%;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    z-index: 5;
+
+    &:hover {
+      z-index: 0;
+    }
   }
 
   &::after {
@@ -129,4 +134,5 @@
   will-change: opacity;
   opacity: 1;
   vertical-align: middle;
+  border-radius: var(--border-radius);
 }

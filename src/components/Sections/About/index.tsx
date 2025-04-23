@@ -1,8 +1,9 @@
 import { Box, List, ListItem, Stack, Typography } from "@mui/material";
 import styles from "./about.module.css";
-import Image from "next/image";
 import { GithubIcon } from "@/assets";
 import { Skills } from "../../../constants/skills";
+import ProfilePic from "../../../assets/profile-pic.jpeg"
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -30,7 +31,7 @@ const About = () => {
         <Box className={styles.aboutImage}>
           <Box className={styles.aboutImageWrapper}>
             <GithubIcon className={styles.aboutImg} />
-            {/* <Image src={""} alt="" /> */}
+            {/* <Image src={ProfilePic} alt="" className={styles.aboutImg} /> */}
           </Box>
         </Box>
       </Box>

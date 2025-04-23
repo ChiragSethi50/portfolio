@@ -3,4 +3,5 @@ export const LINKS = {
   linkedIn: "http://www.linkedin.com/in/chirag-sethi50",
   instagram: "https://www.instagram.com",
   email: "chiragsethi50@gmail.com",
+  zenmonk: "https://zenmonk.tech/",
 };

@@ -8,6 +8,7 @@ import { LINKS } from "@/constants/links";
 import About from "@/components/Sections/About";
 import { useEffect, useState } from "react";
 import AnimatedLoader from "@/components/AnimatedLoader";
+import Experience from "@/components/Sections/Experience";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ export default function Home() {
           <Stack className={styles.page}>
             <LandingSection />
             <About />
+            <Experience />
 
             <Stack className={styles.socialMediaLinks}>
               <Link href={LINKS.linkedIn} target="_blank" color="#a8b2d1">

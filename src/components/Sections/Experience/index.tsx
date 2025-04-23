@@ -1,11 +1,12 @@
-import { Stack } from "@mui/material";
-import React from "react";
+import { Stack, Typography } from "@mui/material";
+import styles from "./experience.module.css"
+import ExperienceTabs from "./ExperienceTabs";
 
 const Experience = () => {
   return (
-    <Stack id="experience">
-      <h2>Projects</h2>
-      <p>My cool stuff...</p>
+    <Stack id="experience" className={styles.experienceSection}>
+      <Typography className={styles.title}>Where I've Worked</Typography>
+      <ExperienceTabs />
     </Stack>
   );
 };
