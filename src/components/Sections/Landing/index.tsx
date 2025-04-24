@@ -5,7 +5,7 @@ import { LINKS } from "@/constants/links";
 
 const LandingSection = () => {
   return (
-    <Stack className={styles.landingTextContainer}>
+    <Stack className={styles.landingTextContainer} id="/" >
       <Typography className={styles.landingText}>Hi, my name is</Typography>
       <Typography className={styles.name}>Chirag Sethi.</Typography>
       <Typography className={styles.profile}>I create things for the web.</Typography>

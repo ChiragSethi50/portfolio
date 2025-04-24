@@ -69,9 +69,48 @@ export default function ExperienceTabs() {
           </Link>
         </Typography>
         <Typography className={styles.range}>February 2025 - Present</Typography>
+        <ul>
+          <Typography fontSize={18}>
+            As a Full Stack Developer, I contribute to the development and maintenance of
+            production-level software solutions for FUNIBER's global educational platforms. My
+            responsibilities include:
+            <li>
+              Writing and maintaining scalable, efficient, and clean production code across various
+              web applications.
+            </li>
+            <li>
+              Developing frontend part of application using Next.js along with Backend For Frontend
+              Architecture.
+            </li>
+            <li>
+              Collaborating with backend teams to integrate APIs and business logic built with
+              Node.js/NestJS.
+            </li>
+            <li>
+              Participating in system design discussions, applying architectural best practices and
+              design principles.
+            </li>
+            <li>
+              Debugging, testing, and optimizing features to ensure performance, security, and
+              reliability.
+            </li>
+            <li>
+              Working closely with cross-functional teams to deliver high-impact solutions on
+              schedule.
+            </li>
+            While my primary focus is frontend development, I actively contribute to backend
+            development and have a strong understanding of full-stack workflows.
+          </Typography>
+        </ul>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Internship
+        <Typography className={styles.workplacePosition}>
+          Full Stack Developer Intern{" "}
+          <Link href={LINKS.zenmonk} className={styles.workplaceLink}>
+            @ Zenmonk
+          </Link>
+        </Typography>
+        <Typography className={styles.range}>January 2024 - January 2025</Typography>
       </TabPanel>
     </Box>
   );

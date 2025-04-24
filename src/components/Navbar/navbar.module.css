@@ -43,3 +43,8 @@
 .hide {
   transform: translateY(-100%);
 }
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
