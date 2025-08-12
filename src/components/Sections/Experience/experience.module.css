@@ -1,8 +1,8 @@
 .experienceSection {
   align-items: center;
   justify-content: center;
-  max-width: 800px;
-  width: 800px;
+  max-width: 850px;
+  width: 100%;
   margin: 0px auto;
   padding: 100px 0px;
   visibility: visible;
@@ -74,7 +74,7 @@
 
 .tabPanelContainer {
   width: 100%;
-  min-height: 620px;
+  min-height: 420px;
   flex: 1;
 }
 .tabPanel ul {

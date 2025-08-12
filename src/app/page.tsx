@@ -4,11 +4,12 @@ import { Fade, Stack, Typography } from "@mui/material";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/assets";
 import Link from "next/link";
 import LandingSection from "@/components/Sections/Landing";
-import { LINKS } from "@/constants/links";
+import { LINKS } from "@/common/links";
 import About from "@/components/Sections/About";
 import { useEffect, useState } from "react";
 import AnimatedLoader from "@/components/AnimatedLoader";
 import Experience from "@/components/Sections/Experience";
+import Work from "@/components/Sections/Work";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +32,8 @@ export default function Home() {
             <LandingSection />
             <About />
             <Experience />
-
+            <Work />
+            
             <Stack className={styles.socialMediaLinks}>
               <Link href={LINKS.linkedIn} target="_blank" color="#a8b2d1">
                 <LinkedinIcon className={styles.socialMediaIcons} />

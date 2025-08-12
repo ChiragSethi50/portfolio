@@ -1,7 +1,7 @@
 import { ButtonBase, Stack, Typography } from "@mui/material";
 import styles from "./landing.module.css";
 import Link from "next/link";
-import { LINKS } from "@/constants/links";
+import { LINKS } from "@/common/links";
 
 const LandingSection = () => {
   return (

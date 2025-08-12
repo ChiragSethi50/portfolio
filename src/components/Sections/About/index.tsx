@@ -1,7 +1,7 @@
 import { Box, List, ListItem, Stack, Typography } from "@mui/material";
 import styles from "./about.module.css";
 import { GithubIcon } from "@/assets";
-import { Skills } from "../../../constants/skills";
+import { Skills } from "./skills";
 import ProfilePic from "../../../assets/profile-pic.jpeg"
 import Image from "next/image";
 

@@ -5,7 +5,8 @@ import Box from "@mui/material/Box";
 import styles from "./experience.module.css";
 import { useState } from "react";
 import Link from "next/link";
-import { LINKS } from "@/constants/links";
+import { LINKS } from "@/common/links";
+import { experienceData } from "./experience.data";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -58,60 +59,30 @@ export default function ExperienceTabs() {
           },
         }}
       >
-        <Tab className={styles.tabs} label="Zenmonk" />
-        <Tab className={styles.tabs} label="Internship" />
+        {experienceData.map((exp, index) => (
+          <Tab key={index} className={styles.tabs} label={exp.company} />
+        ))}
       </Tabs>
-      <TabPanel value={value} index={0}>
-        <Typography className={styles.workplacePosition}>
-          Full Stack Developer{" "}
-          <Link href={LINKS.zenmonk} className={styles.workplaceLink}>
-            @ Zenmonk
-          </Link>
-        </Typography>
-        <Typography className={styles.range}>February 2025 - Present</Typography>
-        <ul>
-          <Typography fontSize={18}>
-            As a Full Stack Developer, I contribute to the development and maintenance of
-            production-level software solutions for FUNIBER's global educational platforms. My
-            responsibilities include:
-            <li>
-              Writing and maintaining scalable, efficient, and clean production code across various
-              web applications.
-            </li>
-            <li>
-              Developing frontend part of application using Next.js along with Backend For Frontend
-              Architecture.
-            </li>
-            <li>
-              Collaborating with backend teams to integrate APIs and business logic built with
-              Node.js/NestJS.
-            </li>
-            <li>
-              Participating in system design discussions, applying architectural best practices and
-              design principles.
-            </li>
-            <li>
-              Debugging, testing, and optimizing features to ensure performance, security, and
-              reliability.
-            </li>
-            <li>
-              Working closely with cross-functional teams to deliver high-impact solutions on
-              schedule.
-            </li>
-            While my primary focus is frontend development, I actively contribute to backend
-            development and have a strong understanding of full-stack workflows.
+      {experienceData.map((exp, index) => (
+        <TabPanel key={index} value={value} index={index}>
+          <Typography className={styles.workplacePosition}>
+            {exp.position}{" "}
+            <Link href={exp.link} className={styles.workplaceLink}>
+              @ {exp.company}
+            </Link>
           </Typography>
-        </ul>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Typography className={styles.workplacePosition}>
-          Full Stack Developer Intern{" "}
-          <Link href={LINKS.zenmonk} className={styles.workplaceLink}>
-            @ Zenmonk
-          </Link>
-        </Typography>
-        <Typography className={styles.range}>January 2024 - January 2025</Typography>
-      </TabPanel>
+          <Typography className={styles.range}>{exp.range}</Typography>
+          <ul>
+            <Typography fontSize={18} marginBottom={1}>{exp.description}</Typography>
+            {exp.details?.map((detail, i) => (
+              <li key={i}>
+                <Typography fontSize={18}>{detail}</Typography>
+              </li>
+            ))}
+            <Typography fontSize={18} marginTop={1}>{exp.closing}</Typography>
+          </ul>
+        </TabPanel>
+      ))}
     </Box>
   );
 }
