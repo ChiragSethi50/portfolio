@@ -29,7 +29,7 @@ export const experienceData: Experience[] = [
     closing: "While my primary focus is frontend development, I actively contribute to backend development and have a strong understanding of full-stack workflows."
   },
   {
-    company: "Internship",
+    company: "Zenmonk",
     position: "Full Stack Developer Intern",
     link: LINKS.zenmonk,
     range: "January 2024 - January 2025",

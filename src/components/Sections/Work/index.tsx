@@ -9,10 +9,13 @@ const Work = () => {
 
       <Grid2 container spacing={2} className={styles.gridContainer}>
         <Grid2 columns={2} className={styles.gridItem}>
-          {/* <image  ></image> */}
+          {/* <image ></image> */}
           <Stack>
             <Typography fontSize={16} fontWeight={500}>
               Built a LinkedIn Clone <SmallArrow />
+            </Typography>
+            <Typography fontSize={16} fontWeight={500}>
+              Exerguide: An exercise guiding app <SmallArrow />
             </Typography>
           </Stack>
         </Grid2>
