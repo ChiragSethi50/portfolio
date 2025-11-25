@@ -43,9 +43,12 @@ const Navbar = () => {
       <Stack direction="row" justifyContent={"space-between"} alignItems={"center"} gap={2}>
         {NavLinks.map((l) => (
           <Link key={l.link} href={l.link}>
-            <Typography className={styles.navbarLink}>{l.title}</Typography> 
+            <Typography className={styles.navbarLink}>{l.title}</Typography>
           </Link>
         ))}
+        <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
+          <ButtonBase className={`global-btn ${styles.resumeBtn}`}>Resume</ButtonBase>
+        </Link>
       </Stack>
     </Stack>
   );

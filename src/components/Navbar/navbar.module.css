@@ -17,6 +17,12 @@
   background: var(--background);
 }
 
+.resumeBtn {
+  padding: 0.75rem 1rem;
+  font-size: var(--fz-xs);
+  margin-left: 15px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .navbar {
     height: 70px;
