@@ -1,6 +1,7 @@
 import { LINKS } from "@/common/links";
 
 export interface Experience {
+  tabName?: string;
   company: string;
   position: string;
   link: string;
@@ -29,6 +30,7 @@ export const experienceData: Experience[] = [
     closing: "While my primary focus is frontend development, I actively contribute to backend development and have a strong understanding of full-stack workflows."
   },
   {
+    tabName: "Internship",
     company: "Zenmonk",
     position: "Full Stack Developer Intern",
     link: LINKS.zenmonk,

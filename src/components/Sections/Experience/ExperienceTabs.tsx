@@ -60,7 +60,7 @@ export default function ExperienceTabs() {
         }}
       >
         {experienceData.map((exp, index) => (
-          <Tab key={index} className={styles.tabs} label={exp.company} />
+          <Tab key={index} className={styles.tabs} label={exp.tabName ?? exp.company} />
         ))}
       </Tabs>
       {experienceData.map((exp, index) => (

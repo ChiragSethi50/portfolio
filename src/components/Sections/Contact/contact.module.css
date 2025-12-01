@@ -1,0 +1,23 @@
+.contactContainer {
+  margin: 0 auto 100px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: clamp(40px, 5vw, 60px);
+  margin: 0px 0px 10px;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  line-height: 1.1;
+}
+
+.contactDescription {
+  font-size: var(--fz-xl);
+}
+
+.contactBtn {
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  margin-top: 50px;
+}
