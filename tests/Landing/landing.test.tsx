@@ -11,7 +11,6 @@ describe("Landing", () => {
     const user = userEvent.setup();
 
     const opening = screen.getByText('Hi, my name is'); // ACT
-    console.log('opening: ', opening.innerHTML);
 
     expect(opening).toBeInTheDocument(); // ASSERT
   });
