@@ -13,10 +13,19 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 50px;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
 }
 
 .textContainer {
   justify-content: center;
+  @media only screen and (max-width: 600px) {
+    order: 2;
+  }
 }
 
 .title {
@@ -73,6 +82,9 @@
 .aboutImage {
   position: relative;
   max-width: 300px;
+  @media only screen and (max-width: 600px) {
+    order: 1;
+  }
 }
 .aboutImageWrapper {
   box-shadow: 0 10px 30px -15px var(--navy-shadow);

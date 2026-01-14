@@ -35,7 +35,7 @@ export default function Home() {
             <Experience />
             <Work />
             {/* <Contact /> */}
-            
+
             <Stack className={styles.socialMediaLinks}>
               <Link href={LINKS.linkedIn} target="_blank" color="#a8b2d1">
                 <LinkedinIcon className={styles.socialMediaIcons} />
@@ -53,7 +53,13 @@ export default function Home() {
             </Stack>
 
             <Stack className={styles.emailLink}>
-              <Typography className={styles.emailLinkText}>{LINKS.email}</Typography>
+              <Typography
+                component={"a"}
+                className={styles.emailLinkText}
+                href={`mailto:${LINKS.email}`}
+              >
+                {LINKS.email}
+              </Typography>
               <hr className={styles.footerVerticalLine} />
             </Stack>
           </Stack>
